@@ -53,3 +53,19 @@
 # ...     i.ratingUser.username
 
 # a = Author.objects.order_by('-ratingAuthor')[:1]
+
+# апдейтим рейтинг авторов
+# author1.update_rating()
+# author2.update_rating()
+
+# Вывод рейтинг Author с наибольшим рейтингом
+# best_author = Author.objects.all().order_by('-rating').values('user', 'rating')[0]
+# Author.objects.get(rating=best_author['rating'])
+
+# Вывод статьи\новости с наибольшим рейтингом
+# best_post = Post.objects.all().order_by('-rating').values('time_pub', 'author', 'rating', 'title', 'body')[0]
+# the_post = Post.objects.get(rating=best_post['rating'])
+# the_post
+
+# best_post_comments = the_post.comment_set.all()
+# best_post_comments
